@@ -51,20 +51,32 @@
         .login-container button:hover {
             background-color: #0056b3;
         }
+        .role-container {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
     <div class="login-container">
         <h1>Login</h1>
-        <form action="http://localhost:3001/submit-login" method="POST">
+        <form action="http://localhost:3000/submit-login" method="POST">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
+            <div class="role-container">
+                <label>Role</label>
+                <input type="radio" id="admin" name="role" value="admin" required>
+                <label for="admin">Admin</label>
+                <input type="radio" id="user" name="role" value="user" required>
+                <label for="user">User</label>
+            </div>
+
             <button type="submit">Login</button>
         </form>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

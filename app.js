@@ -1,6 +1,7 @@
 const express = require ('express');
 const app = express('app');
-const PORT = 3000;
+const router= express.Router();
+const PORT = 3001 ;
 
 /*
 // app.get('/',(req,res) =>{
@@ -14,9 +15,9 @@ app.get('/hello',(req,res)=>{
 
 app.use(express.json());
 app.post('/',(req,res)=>{
-    const {name} = req.body;
     console.log("Name"+ req.body.name);
-    res.send(`Welcome ${name}`);
+    const {name:name2} = req.body;    
+    res.send(`Welcome ${name2}`);
 })
 
 app.listen(PORT,(error)=> {
